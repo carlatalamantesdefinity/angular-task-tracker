@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+$flex-direction: column;
+$justify-content: center;
+$align-content: center;
+$align-items: center;
+
+.header {
+  height: 10vh;
+  @include flex-container();
+  width: 100%;
+  .header__name {
+    @include flex-container($flex-direction, $justify-content);
+    width: 90%;
+    height: 100%;
+    padding-left: 1%;
+    .header__title{
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .header__subtitle{
+      color: $color-grey;
+
+    }
+  }
+  .header__picture {
+    @include flex-container(
+      $flex-direction,
+      $justify-content,
+      $align-content,
+      $align-items
+    );
+    width: 10%;
+    height: 100%;
+    img{
+      height: 7vh;
+      width: 7vh;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
