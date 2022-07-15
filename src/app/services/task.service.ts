@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Task } from '../models/task.model';
-import { Observable, of } from 'rxjs';
+import { CreateTaskDTO, Task } from '../models/task.model';
+import { Observable } from 'rxjs';
+import { v4 as uuidv4 } from 'uuid';
 
+const httOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
 @Injectable({
   providedIn: 'root',
 })
@@ -14,8 +20,21 @@ export class TaskService {
     return this.httpClient.get<Task[]>(this.apiUrl);
   }
 
-  delete(taskId: number): Observable<Task> {
+  delete(taskId: string): Observable<Task> {
     const url = `${this.apiUrl}/${taskId}`;
     return this.httpClient.delete<Task>(url);
+  }
+
+  update(taskId: string, task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${taskId}`;
+    return this.httpClient.put<Task>(url, task, httOptions);
+  }
+
+  create(task: CreateTaskDTO): Observable<Task> {
+    const newTask: Task = {
+      ...task,
+      id: uuidv4(),
+    };
+    return this.httpClient.post<Task>(this.apiUrl, newTask, httOptions);
   }
 }

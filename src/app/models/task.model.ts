@@ -1,6 +1,8 @@
 export interface Task {
-  id?: number;
+  id?: string;
   text: string;
-  day: Date;
+  day: string;
   reminder: boolean;
 }
+
+export interface CreateTaskDTO extends Omit<Task, 'id'> {}

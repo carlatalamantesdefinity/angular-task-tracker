@@ -14,13 +14,22 @@ export class TaskItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onDelete(taskId: number | undefined) {
+  onDelete(taskId: string | undefined) {
     if (taskId == undefined) {
       return;
     } else {
       this.taskService.delete(taskId).subscribe(() => {
         this.getItems.emit();
       });
+    }
+  }
+
+  onToggle(task: Task) {
+    if (task.id == undefined) {
+      return;
+    } else {
+      task.reminder = !task.reminder;
+      this.taskService.update(task.id, task).subscribe();
     }
   }
 }

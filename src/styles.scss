@@ -8,7 +8,7 @@ $color-pink: #f72585;
 $color-purple: #7209b7;
 $color-dark-purple: #3a0ca3;
 $color-blue: #4361ee;
-$color-agua: #4cc9f0;
+$color-aqua: #4cc9f0;
 $color-black: #222222;
 * {
   box-sizing: border-box;
@@ -31,6 +31,7 @@ button {
   letter-spacing: 3px;
   cursor: pointer;
   min-height: 36px;
+  min-width: 160px;
   &:hover {
     border: $color-dark-purple 1px solid;
     color: $color-dark-purple;

@@ -1,0 +1,24 @@
+<form>
+  <div class="form-control">
+    <label for="inpt-text">Task</label>
+    <input type="text" name="text" id="inpt-text" [(ngModel)]="text" />
+  </div>
+  <div class="form-control">
+    <label for="inpt-day">Date</label>
+    <input type="date" name="day" id="inpt-day" [(ngModel)]="day" />
+  </div>
+  <div class="form-control-check">
+    <label for="inpt-reminder">Set Reminder</label>
+    <input
+      type="checkbox"
+      name="reminder"
+      id="inpt-reminder"
+      [(ngModel)]="reminder"
+    />
+  </div>
+  <div class="form-button">
+    <button type="submit" class="form-button" (click)="onSubmit()">
+      Create task
+    </button>
+  </div>
+</form>
