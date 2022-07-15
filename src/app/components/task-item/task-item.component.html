@@ -3,5 +3,8 @@
     <h4>{{ task.text }}</h4>
     <span>{{ task.day | date: "short" }}</span>
   </div>
-  <div class="task__icon">✔️</div>
+  <div class="task__icon">
+    <app-button text="Delete" (btnClick)="onDelete(task.id)"></app-button>
+    <app-button text="Completed"></app-button>
+  </div>
 </div>

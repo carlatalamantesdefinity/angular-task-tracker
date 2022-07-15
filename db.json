@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Pick up dry cleaning",
+      "day": "2022-07-16T18:45:27.364Z",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Nail appointment",
+      "day": "2022-07-16T18:45:36.162Z",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Grocery shopping",
+      "day": "2022-07-16T18:45:52.265Z",
+      "reminder": false
+    }
+  ]
+}

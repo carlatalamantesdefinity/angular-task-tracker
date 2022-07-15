@@ -1,3 +1,7 @@
 <section>
-  <app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
+  <app-task-item
+    *ngFor="let task of tasks"
+    [task]="task"
+    (getItems)="getItems()"
+  ></app-task-item>
 </section>
