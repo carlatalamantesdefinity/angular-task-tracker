@@ -1,19 +1,16 @@
 @import "../../../styles.scss";
 
+$align-content: center;
 $flex-direction: column;
 $justify-content: center;
-$align-content: center;
-$align-items: center;
-
-.header {
-  height: 10vh;
+.header_profile {
   @include flex-container();
   width: 100%;
+  padding: 1%;
   .header__name {
     @include flex-container($flex-direction, $justify-content);
     width: 90%;
     height: 100%;
-    padding-left: 1%;
     .header__title{
       font-size: 16px;
       font-weight: 500;
@@ -28,7 +25,7 @@ $align-items: center;
       $flex-direction,
       $justify-content,
       $align-content,
-      $align-items
+      $align-items: flex-end
     );
     width: 10%;
     height: 100%;
@@ -39,4 +36,9 @@ $align-items: center;
       border-radius: 50%;
     }
   }
+}
+
+.header_btn{
+  padding-right: 1%;
+  @include flex-container($justify-content:flex-end);
 }

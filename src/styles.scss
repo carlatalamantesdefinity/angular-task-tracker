@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /*
 * COLORS
 */
-$color-grey:#b2b2b2;
-$color-pink:#F72585;
-$color-purple:#7209B7;
-$color-dark-purple:#3a0ca3;
-$color-blue:#4361EE;
-$color-agua:#4CC9F0;
-$color-black:#222222;
+$color-grey: #b2b2b2;
+$color-pink: #f72585;
+$color-purple: #7209b7;
+$color-dark-purple: #3a0ca3;
+$color-blue: #4361ee;
+$color-agua: #4cc9f0;
+$color-black: #222222;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,19 +20,27 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-button{
+button {
   background-color: $color-dark-purple;
-  padding: 1%;
-  border: 0;
+  padding: 0 32px 0 32px;
+  border: 1px solid $color-dark-purple;
   border-radius: 5px;
-  color:white;
+  color: white;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  min-height: 36px;
+  &:hover {
+    border: $color-dark-purple 1px solid;
+    color: $color-dark-purple;
+    background-color: white;
+    transition: 0.1s;
+  }
+  &:focus {
+    outline: none;
+  }
 }
-
-
-
-
 
 /*
 * MIXINS
@@ -42,12 +50,11 @@ button{
   $flex-direction: row,
   $justify-content: flex-start,
   $align-content: flex-start,
-  $align-items: flex-start,
+  $align-items: flex-start
 ) {
   display: flex;
   flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-content: $align-content;
   align-items: $align-items;
-
 }
