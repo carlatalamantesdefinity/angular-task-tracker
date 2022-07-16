@@ -1,11 +1,13 @@
-<form>
-  <div class="form-control">
-    <label for="inpt-text">Task</label>
-    <input type="text" name="text" id="inpt-text" [(ngModel)]="text" />
-  </div>
-  <div class="form-control">
-    <label for="inpt-day">Date</label>
-    <input type="date" name="day" id="inpt-day" [(ngModel)]="day" />
+<form *ngIf="showForm">
+  <div class="form-row">
+    <div class="form-control">
+      <label for="inpt-text">Task</label>
+      <input type="text" name="text" id="inpt-text" [(ngModel)]="text" />
+    </div>
+    <div class="form-control">
+      <label for="inpt-day">Date</label>
+      <input type="date" name="day" id="inpt-day" [(ngModel)]="day" />
+    </div>
   </div>
   <div class="form-control-check">
     <label for="inpt-reminder">Set Reminder</label>

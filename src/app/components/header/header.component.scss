@@ -11,13 +11,12 @@ $justify-content: center;
     @include flex-container($flex-direction, $justify-content);
     width: 90%;
     height: 100%;
-    .header__title{
+    .header__title {
       font-size: 16px;
       font-weight: 500;
     }
-    .header__subtitle{
+    .header__subtitle {
       color: $color-grey;
-
     }
   }
   .header__picture {
@@ -29,7 +28,7 @@ $justify-content: center;
     );
     width: 10%;
     height: 100%;
-    img{
+    img {
       height: 7vh;
       width: 7vh;
       object-fit: cover;
@@ -38,7 +37,7 @@ $justify-content: center;
   }
 }
 
-.header_btn{
-  padding-right: 1%;
-  @include flex-container($justify-content:flex-end);
+.header_btn {
+  padding: 1%;
+  @include flex-container($justify-content: space-between);
 }

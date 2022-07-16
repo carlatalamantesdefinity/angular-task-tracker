@@ -11,6 +11,11 @@
     </div>
   </div>
   <div class="header_btn">
-    <app-button text="Add task" (btnClick)="toggleAddTask()"></app-button>
+    <h1>Task tracker</h1>
+
+    <app-button
+      text="{{ showAddTask ? 'Close' : 'Add task' }}"
+      (btnClick)="toggleAddTask()"
+    ></app-button>
   </div>
 </header>
